@@ -159,6 +159,45 @@ p { color: var(--muted); line-height: 1.5; }
   font-style: italic;
 }
 
+.film-section {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(139, 216, 201, .1), transparent 38%),
+    var(--dark);
+}
+.film-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .55fr);
+  column-gap: 70px;
+  align-items: end;
+  max-width: none;
+}
+.film-heading .kicker { grid-column: 1 / -1; }
+.film-heading h2 { margin-bottom: 0; }
+.film-heading > p:last-child { margin-bottom: 4px; }
+.film-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: var(--radius);
+  background: #050809;
+  box-shadow: 0 34px 90px rgba(0,0,0,.45);
+}
+.film-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 78vh;
+  object-fit: contain;
+  background: #050809;
+}
+.film-caption {
+  margin: 16px 0 0;
+  color: rgba(255,255,255,.5);
+  font-size: 12px;
+}
+
 .section-header { max-width: 900px; margin-bottom: 54px; }
 .section-header.narrow { max-width: 760px; }
 .kicker {
@@ -389,6 +428,9 @@ p { color: var(--muted); line-height: 1.5; }
   .hero-shade { background: linear-gradient(180deg, rgba(12,18,19,.58), rgba(12,18,19,.2) 55%, rgba(12,18,19,.65)); }
   .launch-pill { margin-bottom: 54px; }
   .solution-layout, .scenarios-lead, .app-layout, .personalized-lead { grid-template-columns: 1fr; }
+  .film-heading { grid-template-columns: 1fr; row-gap: 16px; }
+  .film-heading .kicker { grid-column: auto; }
+  .film-heading h2 { margin-bottom: 4px; }
   .solution-layout, .scenarios-lead, .personalized-lead { gap: 42px; }
   .app-layout { gap: 56px; }
   .product-frame { width: min(100%, 430px); margin: 0 auto; }
@@ -407,6 +449,13 @@ p { color: var(--muted); line-height: 1.5; }
   .nav-cta { min-height: 38px; padding: 0 13px; font-size: 11px; }
   .content-shell { width: calc(100% - 32px); }
   .section { padding: 64px 0; overflow: hidden; }
+  .film-section { padding-top: 72px; padding-bottom: 72px; }
+  .film-heading { margin-bottom: 30px; }
+  .film-frame video {
+    aspect-ratio: 16 / 9;
+    max-height: none;
+  }
+  .film-caption { line-height: 1.4; }
   .hero, .hero-content { min-height: 760px; }
   .hero-image { object-position: 56% center; }
   .hero-content { padding-top: 92px; padding-bottom: 34px; }
