@@ -3,231 +3,365 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e191b" />
     <title>RoboRoll L1 by Snailcle | Motorized Massage Roller</title>
     <meta
       name="description"
-      content="RoboRoll L1 by Snailcle is a Motorized Massage Roller for targeted back relief at home."
+      content="RoboRoll L1 is a motorized massage roller created to bring targeted back relief into everyday home life."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page-progress" aria-hidden="true"><span></span></div>
 
-    <header class="nav">
-      <a href="#top" class="brand">RoboRoll L1 <span>by Snailcle</span></a>
-      <nav aria-label="Campaign sections">
+    <header class="site-nav">
+      <a class="nav-brand" href="#top">RoboRoll L1 <small>by Snailcle</small></a>
+      <nav aria-label="Page sections">
         <a href="#story">Story</a>
-        <a href="#scenarios">Use</a>
-        <a href="#app">App</a>
-        <a href="#back">Back it</a>
+        <a href="#solution">Product</a>
+        <a href="#scenarios">Scenarios</a>
+        <a href="#kickstarter">Kickstarter</a>
       </nav>
+      <a class="nav-cta" href="#kickstarter">Back RoboRoll</a>
     </header>
 
     <main id="top">
-      <section class="hero section-dark">
-        <div class="hero-copy">
-          <p class="eyebrow">Motorized Massage Roller</p>
+      <section class="hero">
+        <img class="hero-image" src="./assets/hero-product.jpg" alt="RoboRoll L1 motorized massage roller" />
+        <div class="hero-shade"></div>
+        <div class="hero-content content-shell">
+          <p class="brand-line">RoboRoll L1 by Snailcle</p>
+          <span class="launch-pill">Launching on Kickstarter</span>
           <h1>Roll to<br />Unfold.</h1>
-          <p class="lead">
-            Therapist-inspired rolling pressure for targeted back relief at home.
+          <p class="hero-intro">
+            A Motorized Massage Roller created to bring targeted back relief into everyday home life.
           </p>
-          <a class="cta" href="#back">Back RoboRoll on Kickstarter</a>
+          <p class="hero-quote">Every roll is a deep breath for your spine.</p>
         </div>
-        <div class="hero-stage" aria-label="RoboRoll L1 product image">
-          <div class="aura"></div>
-          <img src="./assets/hero-product.jpg" alt="RoboRoll L1 Motorized Massage Roller" />
-          <div class="roller-line"></div>
-        </div>
-        <p class="hero-quote">Every roll is a deep breath for your spine.</p>
       </section>
 
-      <section id="story" class="story section-light reveal">
-        <div class="section-head">
-          <p class="eyebrow">Founder story</p>
-          <h2>Created from pain, engineered for relief.</h2>
-        </div>
-        <div class="story-grid">
-          <figure class="wide-photo">
+      <section id="story" class="section light reveal">
+        <div class="content-shell">
+          <header class="section-header">
+            <p class="kicker">Founder story</p>
+            <h2>Created from pain — and from one unforgettable moment of relief.</h2>
+          </header>
+
+          <figure class="founder-photo media-frame">
             <img src="./assets/founder.jpg" alt="Dr. Stephen presenting RoboRoll L1" />
-            <figcaption>Invented by Dr. Stephen, Ph.D. in Robotics.</figcaption>
+            <figcaption>RoboRoll L1 by Snailcle</figcaption>
           </figure>
-          <div class="story-text">
+
+          <div class="story-columns">
             <p>
-              RoboRoll began with real back pain: eight herniated discs, severe back
-              fasciitis, and the frustration of trying massage chairs, cushions, and
-              devices that mostly vibrated, kneaded, and followed fixed routines.
+              Dr. Stephen, RoboRoll's inventor and a Ph.D. in Robotics, lived with eight herniated discs
+              and severe back fasciitis. He tried massage chairs, cushions, and nearly every massager he
+              could find. Most of them did the same thing: vibrate, knead, and follow a fixed factory
+              routine.
             </p>
             <p>
-              Then one physical therapist used a simple roller along the spine:
-              pressing, supporting, rolling, releasing. The feeling was different
-              from ordinary massage. The relief came from deep inside.
-            </p>
-            <p class="pull">
-              Why can’t a robot bring this therapist-like rolling care home?
+              Then a physical therapist used a simple roller along his spine — pressing, supporting,
+              rolling, and releasing. The feeling was completely different from ordinary massage: the
+              tight fascia began to open, the over-curved back felt gently supported, and the relief came
+              from deep inside.
             </p>
           </div>
+
+          <p class="story-question">
+            That moment became the question behind RoboRoll: why can't a robot bring this
+            therapist-like rolling care home?
+          </p>
+
+          <article class="vision-panel">
+            <span class="accent-line"></span>
+            <h3>We are building a robotic therapist for everyday back care.</h3>
+            <p>
+              The first prototype was built in a university lab. Then came two years of product
+              development: biomechanics, physical therapy principles, discs, fascia, nerves, AI routines,
+              dozens of redesigns, and thousands of tests. Our goal is not the flashiest machine. It is a
+              precise, accessible product that can help millions wake up feeling a little lighter.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section class="vision section-dark reveal">
-        <div class="sticky-product">
-          <img src="./assets/product-still.jpg" alt="RoboRoll L1 front view" />
-        </div>
-        <div class="vision-copy">
-          <p class="eyebrow">Two years. Thousands of tests.</p>
-          <h2>A robotic therapist for everyday back care.</h2>
-          <p>
-            Built from biomechanics, physical therapy principles, fascia research,
-            pain-point positioning, and AI-assisted routines.
-          </p>
-          <div class="stats">
-            <span><strong>2 years</strong> product refinement</span>
-            <span><strong>1000+</strong> tests and iterations</span>
-            <span><strong>AI</strong> personalized routines</span>
+      <section class="section light problem reveal">
+        <div class="content-shell">
+          <header class="section-header narrow">
+            <p class="kicker">The problem</p>
+            <h2>Modern life asks the back to endure too much sitting.</h2>
+            <p>
+              Desk work, long drives, late-night study, and training recovery all create the same need:
+              targeted relief that fits ordinary routines.
+            </p>
+          </header>
+          <div class="card-grid three">
+            <article class="info-card teal">
+              <h3>Desk fatigue</h3>
+              <p>Tight lumbar muscles after long hours of screens and meetings.</p>
+            </article>
+            <article class="info-card clay">
+              <h3>Recovery friction</h3>
+              <p>Floor-based tools are easy to skip when you are already tired.</p>
+            </article>
+            <article class="info-card blue">
+              <h3>Guesswork</h3>
+              <p>Most devices do not help you return to the same pain point tomorrow.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="problem section-light reveal">
-        <div class="section-head">
-          <p class="eyebrow">The problem</p>
-          <h2>Modern life asks the back to endure too much sitting.</h2>
-        </div>
-        <div class="cards three">
-          <article>
-            <span></span>
-            <h3>Desk fatigue</h3>
-            <p>Tight lumbar muscles after long hours of screens and meetings.</p>
-          </article>
-          <article>
-            <span></span>
-            <h3>Recovery friction</h3>
-            <p>Foam rollers work, but floor routines are easy to skip.</p>
-          </article>
-          <article>
-            <span></span>
-            <h3>Guesswork</h3>
-            <p>Most devices do not remember where you actually hurt.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="compare section-dark reveal">
-        <div class="section-head">
-          <p class="eyebrow">Beyond vibration</p>
-          <h2>A massage that feels good for three minutes is not enough.</h2>
-        </div>
-        <div class="compare-grid">
-          <article class="dim-card">
-            <h3>Ordinary massagers</h3>
-            <ul>
-              <li>Random vibration</li>
-              <li>Surface kneading</li>
-              <li>Fixed programs</li>
-              <li>No pain-point memory</li>
-            </ul>
-          </article>
-          <article class="bright-card">
-            <h3>RoboRoll L1</h3>
-            <ul>
-              <li>Pressing, supporting, rolling</li>
-              <li>Guided vertical path</li>
-              <li>AI pain-point routines</li>
-              <li>Custom programs you can save</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="scenarios" class="scenarios section-light reveal">
-        <div class="section-head">
-          <p class="eyebrow">Real use scenarios</p>
-          <h2>Not just a beautiful product. A product made to be used.</h2>
-        </div>
-        <div class="scenario-strip">
-          <figure><img src="./assets/office-use.jpg" alt="Office chair use" /><figcaption>Office reset</figcaption></figure>
-          <figure class="large"><img src="./assets/home-use.jpg" alt="Home chair back relief" /><figcaption>Home back relief</figcaption></figure>
-          <figure><img src="./assets/gym-use.jpg" alt="Gym recovery use" /><figcaption>Gym recovery</figcaption></figure>
-          <figure><img src="./assets/leg-roll.jpg" alt="Leg rolling use" /><figcaption>Leg rolling</figcaption></figure>
-          <figure><img src="./assets/deep-rest.jpg" alt="Deep rest use" /><figcaption>Deep rest</figcaption></figure>
-          <figure><img src="./assets/app-hand.jpg" alt="Using RoboRoll app" /><figcaption>App in hand</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="three-in-one section-light reveal">
-        <div class="section-head">
-          <p class="eyebrow">3-in-1 design</p>
-          <h2>Back relief. Automatic foam rolling. Smart lumbar support.</h2>
-        </div>
-        <div class="feature-showcase">
-          <article>
-            <img src="./assets/home-use.jpg" alt="Back relief mode" />
-            <h3>Back relief</h3>
-            <p>Place it behind your chair or sofa for guided rolling pressure.</p>
-          </article>
-          <article>
-            <img src="./assets/leg-roll.jpg" alt="Automatic foam roller mode" />
-            <h3>Auto foam roller</h3>
-            <p>Roll legs or arms without bodyweight effort.</p>
-          </article>
-          <article>
-            <img src="./assets/spine-diagram.jpg" alt="Smart lumbar support diagram" />
-            <h3>Smart support</h3>
-            <p>Hold the roller at a precise support point.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="app" class="app section-dark reveal">
-        <div class="app-copy">
-          <p class="eyebrow">Smart app guidance</p>
-          <h2>Less guessing. More repeatable relief.</h2>
-          <p>
-            Record pain-point positions, choose your physical status, and start a
-            guided rolling routine with one tap.
-          </p>
-          <div class="pill-stack">
-            <span>Pain-point memory</span>
-            <span>AI recovery plan</span>
-            <span>One-click start</span>
+      <section class="section dark reveal">
+        <div class="content-shell">
+          <header class="section-header narrow">
+            <p class="kicker">Why ordinary massagers fall short</p>
+            <h2>A massage that feels good for three minutes is not enough.</h2>
+            <p>
+              Traditional devices often vibrate, knead, or rotate on a fixed path. RoboRoll was designed
+              around a different question: how do we bring therapist-like spinal rolling, support, and
+              personalization into a home product?
+            </p>
+          </header>
+          <div class="comparison-grid">
+            <article class="comparison-card muted-card">
+              <h3>Traditional massagers</h3>
+              <ul>
+                <li>Random vibration and kneading</li>
+                <li>Surface-level muscle contact</li>
+                <li>Rigid factory routines</li>
+                <li>No memory of where you hurt</li>
+              </ul>
+            </article>
+            <article class="comparison-card paper-card">
+              <h3>RoboRoll approach</h3>
+              <ul>
+                <li>Pressing, supporting, rolling, releasing</li>
+                <li>Guided motion along the back</li>
+                <li>AI routine based on pain points</li>
+                <li>Custom programs you can save and share</li>
+              </ul>
+            </article>
           </div>
         </div>
-        <div class="phones">
-          <img src="./assets/app-plan.jpg" alt="RoboRoll app recovery plan screen" />
-          <img src="./assets/app-pain.jpg" alt="RoboRoll app pain point mapping screen" />
+      </section>
+
+      <section id="solution" class="section light reveal">
+        <div class="content-shell solution-layout">
+          <div>
+            <header class="section-header">
+              <p class="kicker">The solution</p>
+              <h2>Meet the Motorized Massage Roller.</h2>
+              <p>
+                RoboRoll L1 turns therapist-inspired rolling motion into a powered massage roller with a
+                guided path, textured pressure, and app-assisted routines.
+              </p>
+            </header>
+            <div class="feature-pills">
+              <span>Guided vertical travel</span>
+              <span>Textured pressure roller</span>
+              <span>Chair-ready home form</span>
+            </div>
+          </div>
+          <figure class="product-frame media-frame">
+            <img src="./assets/product-still.jpg" alt="RoboRoll L1 product standing upright" />
+          </figure>
         </div>
       </section>
 
-      <section class="personalize section-light reveal">
-        <div class="section-head">
-          <p class="eyebrow">Personalized by you</p>
-          <h2>Nobody knows your body better than you.</h2>
-          <p>
-            Create, save, and share routines. RoboRoll is not just a device with
-            presets; it can become a growing library of back-care programs.
-          </p>
-        </div>
-        <div class="flow">
-          <span>Create</span>
-          <i></i>
-          <span>Save</span>
-          <i></i>
-          <span>Share</span>
+      <section id="scenarios" class="section white reveal">
+        <div class="content-shell">
+          <div class="scenarios-lead">
+            <header class="section-header">
+              <p class="kicker">Real use scenarios</p>
+              <h2>Not just a beautiful object. A product made to be used.</h2>
+              <p>
+                RoboRoll can live behind an office chair, a home chair, a gym bench, or even become an
+                automatic foam roller for legs and recovery routines.
+              </p>
+            </header>
+            <figure class="scenario-main media-frame">
+              <img src="./assets/home-use.jpg" alt="Using RoboRoll behind a home chair" />
+              <figcaption>Home back relief</figcaption>
+            </figure>
+          </div>
+          <div class="scenario-grid">
+            <figure class="media-frame">
+              <img src="./assets/office-use.jpg" alt="Office reset" />
+              <figcaption>Office reset</figcaption>
+            </figure>
+            <figure class="media-frame">
+              <img src="./assets/gym-use.jpg" alt="Gym recovery" />
+              <figcaption>Gym recovery</figcaption>
+            </figure>
+            <figure class="media-frame">
+              <img src="./assets/leg-roll.jpg" alt="Leg rolling" />
+              <figcaption>Leg rolling</figcaption>
+            </figure>
+            <figure class="media-frame wide">
+              <img src="./assets/deep-rest.jpg" alt="Deep rest" />
+              <figcaption>Deep rest</figcaption>
+            </figure>
+            <figure class="media-frame wide">
+              <img src="./assets/app-hand.jpg" alt="RoboRoll app in hand" />
+              <figcaption>App in hand</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
-      <section id="back" class="closing section-dark">
-        <div class="closing-bg">
-          <img src="./assets/hero-product.jpg" alt="" />
+      <section class="section light reveal">
+        <div class="content-shell">
+          <header class="section-header">
+            <p class="kicker">How it works</p>
+            <h2>Roll. Press. Release.</h2>
+          </header>
+          <div class="card-grid three steps">
+            <article class="info-card"><span>01</span><h3>Place</h3><p>Lean RoboRoll behind your lower back while seated or reclining.</p></article>
+            <article class="info-card"><span>02</span><h3>Target</h3><p>Move the roller to the area that needs attention.</p></article>
+            <article class="info-card"><span>03</span><h3>Repeat</h3><p>Let rhythmic rolling pressure work through the tight zone.</p></article>
+          </div>
         </div>
-        <div class="closing-copy reveal">
-          <p class="eyebrow">RoboRoll L1 by Snailcle</p>
-          <h2>Bring targeted rolling relief home.</h2>
-          <p>
-            For desk workers, drivers, students, athletes, and anyone whose back
-            asks for help at the end of the day.
+      </section>
+
+      <section class="section white reveal">
+        <div class="content-shell">
+          <header class="section-header">
+            <p class="kicker">Three products in one</p>
+            <h2>Back relief. Automatic foam rolling. Smart lumbar support.</h2>
+          </header>
+          <div class="product-grid">
+            <article class="product-card">
+              <img src="./assets/home-use.jpg" alt="At-home back therapy" />
+              <h3>At-home back therapy</h3>
+              <p>Place it behind a chair or sofa. It glides up and down automatically to release tension in back muscles and fascia.</p>
+            </article>
+            <article class="product-card">
+              <img src="./assets/leg-roll.jpg" alt="Effortless foam rolling" />
+              <h3>Effortless foam rolling</h3>
+              <p>Use it under legs, arms, or other tired areas. No floor effort, no bodyweight wrestling, just automatic rolling.</p>
+            </article>
+            <article class="product-card">
+              <img src="./assets/spine-diagram.jpg" alt="Precision lumbar support" />
+              <h3>Precision lumbar support</h3>
+              <p>Fix the roller where support is needed. Unlike generic curved cushions, it can move to the exact area asking for help.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark reveal">
+        <div class="content-shell app-layout">
+          <div>
+            <header class="section-header">
+              <p class="kicker">Smart guidance</p>
+              <h2>Less guessing. More repeatable relief.</h2>
+              <p>
+                Record pain-point positions, choose a routine for the day, and start a guided session with
+                one tap.
+              </p>
+            </header>
+            <div class="feature-pills mint">
+              <span>Pain-point memory</span>
+              <span>Smart recovery plan</span>
+              <span>One-click start</span>
+            </div>
+          </div>
+          <div class="phone-pair">
+            <img src="./assets/app-plan.jpg" alt="RoboRoll smart recovery plan" />
+            <img src="./assets/app-pain.jpg" alt="RoboRoll pain-point mapping" />
+          </div>
+          <p class="source-note">Product screenshots provided by RoboRoll.</p>
+        </div>
+      </section>
+
+      <section class="section light reveal">
+        <div class="content-shell">
+          <div class="personalized-lead">
+            <header class="section-header">
+              <p class="kicker">Personalized by you</p>
+              <h2>Nobody knows your body better than you.</h2>
+              <p>
+                RoboRoll lets users create, save, and share custom routines. For backers, that means this is
+                not just a device with preset modes — it can become a growing library of personalized
+                recovery programs.
+              </p>
+            </header>
+            <figure class="media-frame personal-photo">
+              <img src="./assets/app-hand.jpg" alt="Personalizing a RoboRoll routine in the app" />
+            </figure>
+          </div>
+          <div class="card-grid three steps">
+            <article class="info-card"><span>01</span><h3>Create</h3><p>Build a routine around your own pain points.</p></article>
+            <article class="info-card"><span>02</span><h3>Save</h3><p>Return to what worked yesterday.</p></article>
+            <article class="info-card"><span>03</span><h3>Share</h3><p>Exchange favorite routines with other users.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light reveal">
+        <div class="content-shell">
+          <header class="section-header">
+            <p class="kicker">Why it matters</p>
+            <h2>Four pathways of relief in one rolling motion.</h2>
+          </header>
+          <div class="benefit-grid">
+            <article><i class="dot teal-bg"></i><div><h3>Biomechanical support</h3><p>Designed to support the natural lumbar curve and reduce the feeling of loaded pressure.</p></div></article>
+            <article><i class="dot clay-bg"></i><div><h3>Fascial rolling</h3><p>Textured pressure and friction help work through sticky-feeling knots and tight tissue.</p></div></article>
+            <article><i class="dot blue-bg"></i><div><h3>Circulation boost</h3><p>Rhythmic pressure helps the back feel warm, refreshed, and less stagnant.</p></div></article>
+            <article><i class="dot sand-bg"></i><div><h3>Nervous system calm</h3><p>A repeatable routine can help the body move from tension toward relaxation.</p></div></article>
+          </div>
+          <p class="disclaimer">
+            This page describes comfort and wellness use. RoboRoll is not presented as a medical diagnosis
+            or treatment device.
           </p>
-          <a class="cta" href="#top">Roll to Unfold</a>
+        </div>
+      </section>
+
+      <section class="section light reveal">
+        <div class="content-shell">
+          <header class="section-header">
+            <p class="kicker">Everyday moments</p>
+            <h2>Designed for the places people actually recover.</h2>
+          </header>
+          <div class="card-grid four moments">
+            <article class="info-card"><span>01</span><h3>Work chair</h3><p>A short reset between meetings.</p></article>
+            <article class="info-card"><span>02</span><h3>Sofa</h3><p>Evening decompression without changing rooms.</p></article>
+            <article class="info-card"><span>03</span><h3>Long drive</h3><p>A recovery routine after hours of sitting.</p></article>
+            <article class="info-card"><span>04</span><h3>After training</h3><p>Gentle rolling after stretching or workouts.</p></article>
+          </div>
+          <p class="closing-strip">The easier a ritual feels, the more likely people are to return tomorrow.</p>
+        </div>
+      </section>
+
+      <section id="kickstarter" class="section white reveal">
+        <div class="content-shell">
+          <header class="section-header narrow">
+            <p class="kicker">Why Kickstarter</p>
+            <h2>Backers help turn a working idea into a product people can own.</h2>
+            <p>
+              Your support helps us refine the product, prepare manufacturing, improve the app experience,
+              and deliver RoboRoll L1 to the first community of users.
+            </p>
+          </header>
+          <div class="card-grid four steps">
+            <article class="info-card"><span>01</span><h3>Tooling</h3><p>Molds and production fixtures</p></article>
+            <article class="info-card"><span>02</span><h3>Manufacturing</h3><p>Assembly and quality checks</p></article>
+            <article class="info-card"><span>03</span><h3>App refinement</h3><p>Programs, mapping, onboarding</p></article>
+            <article class="info-card"><span>04</span><h3>Backer delivery</h3><p>Packaging, manuals, fulfillment</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <img src="./assets/hero-product.jpg" alt="" />
+        <div class="final-shade"></div>
+        <div class="content-shell final-content">
+          <p class="brand-line">RoboRoll L1 by Snailcle</p>
+          <h2>Join the<br />first roll.</h2>
+          <p>RoboRoll was created because pain was real. We are building it so relief can become part of everyday life.</p>
+          <a class="primary-button" href="https://www.kickstarter.com/projects/snailcle/1065424292" target="_blank" rel="noopener">Back RoboRoll on Kickstarter</a>
+          <p class="hero-quote">Every roll is a deep breath for your spine.</p>
         </div>
       </section>
     </main>
