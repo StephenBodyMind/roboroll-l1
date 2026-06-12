@@ -1,6 +1,7 @@
 const root = document.documentElement;
 const progress = document.querySelector(".page-progress span");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const motionTargets = [];
 
 function splitWords(element) {
   if (element.dataset.split === "true") return;
@@ -73,9 +74,28 @@ const revealObserver = new IntersectionObserver(
 
 document
   .querySelectorAll(".reveal, .motion-copy, .motion-item, .story-columns, .story-question, .phone-pair, .final-content")
-  .forEach((element) => revealObserver.observe(element));
+  .forEach((element) => {
+    motionTargets.push(element);
+    revealObserver.observe(element);
+  });
 
 document.querySelector(".hero-content")?.classList.add("is-visible");
+
+function revealTargetsInView() {
+  const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  motionTargets.forEach((element) => {
+    if (element.classList.contains("is-visible")) return;
+    const rect = element.getBoundingClientRect();
+    const visiblePixels = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+
+    if (visiblePixels > 12 && rect.top < viewportHeight - 8 && rect.bottom > 8) {
+      element.classList.add("is-visible");
+      if (element.classList.contains("reveal")) element.classList.add("visible");
+      revealObserver.unobserve(element);
+    }
+  });
+}
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
@@ -115,14 +135,25 @@ window.addEventListener(
     ticking = true;
     requestAnimationFrame(() => {
       updateScrollEffects();
+      revealTargetsInView();
       ticking = false;
     });
   },
   { passive: true }
 );
 
-window.addEventListener("resize", updateScrollEffects);
+window.addEventListener("resize", () => {
+  updateScrollEffects();
+  revealTargetsInView();
+});
+window.addEventListener("hashchange", () => requestAnimationFrame(revealTargetsInView));
+window.addEventListener("pageshow", () => requestAnimationFrame(revealTargetsInView));
+window.addEventListener("load", () => {
+  requestAnimationFrame(revealTargetsInView);
+  window.setTimeout(revealTargetsInView, 180);
+});
 updateScrollEffects();
+requestAnimationFrame(revealTargetsInView);
 
 if (!reduceMotion && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
   document.querySelectorAll(".info-card, .product-card, .comparison-card").forEach((card) => {
