@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0e191b" />
+    <title>RoboRoll Community Suggestions</title>
+    <meta name="description" content="Suggestions and replies from the RoboRoll community." />
+    <link rel="stylesheet" href="./styles.css?v=20260614-1" />
+  </head>
+  <body class="community-page">
+    <header class="site-nav">
+      <a class="nav-brand" href="./index.html">RoboRoll L1 <small>by Snailcle</small></a>
+      <a class="nav-cta" href="./index.html#feedback">Share an idea</a>
+    </header>
+    <main>
+      <section class="community-hero">
+        <div class="content-shell">
+          <p class="kicker">RoboRoll community</p>
+          <h1>Suggestions, questions, and conversations.</h1>
+          <p>Read what future users are asking for and see responses from the RoboRoll team.</p>
+          <a class="text-link light-link" href="./index.html#feedback">← Return to the product page</a>
+        </div>
+      </section>
+      <section class="community-list-section section light">
+        <div class="content-shell community-shell">
+          <div class="community-list-head">
+            <div>
+              <p class="kicker">All messages</p>
+              <h2>Every idea helps shape the next roll.</h2>
+            </div>
+            <a class="primary-button" href="./index.html#feedback">Post a suggestion</a>
+          </div>
+          <div id="all-comments" class="comment-list full" aria-live="polite">
+            <p class="comment-loading">Loading community suggestions…</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./supabase-config.js?v=20260614-1"></script>
+    <script type="module" src="./comments.js?v=20260614-1"></script>
+  </body>
+</html>

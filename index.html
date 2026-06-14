@@ -9,7 +9,7 @@
       name="description"
       content="RoboRoll L1 is a motorized massage roller created to bring targeted back relief into everyday home life."
     />
-    <link rel="stylesheet" href="./styles.css?v=20260612-2" />
+    <link rel="stylesheet" href="./styles.css?v=20260614-1" />
   </head>
   <body>
     <div class="page-progress" aria-hidden="true"><span></span></div>
@@ -21,6 +21,7 @@
         <a href="#solution">Product</a>
         <a href="#scenarios">Scenarios</a>
         <a href="#kickstarter">Kickstarter</a>
+        <a href="#feedback">Feedback</a>
       </nav>
       <a class="nav-cta" href="#kickstarter">Back RoboRoll</a>
     </header>
@@ -389,8 +390,60 @@
           <p class="hero-quote">Every roll is a deep breath for your spine.</p>
         </div>
       </section>
+
+      <section id="feedback" class="feedback-section section dark">
+        <div class="content-shell">
+          <div class="feedback-intro">
+            <header class="section-header">
+              <p class="kicker">Join the conversation</p>
+              <h2>What would make RoboRoll better for you?</h2>
+              <p>
+                Share your name and suggestion. Selected messages and replies from the RoboRoll team
+                appear below.
+              </p>
+            </header>
+
+            <form id="feedback-form" class="feedback-form" novalidate>
+              <div class="form-field">
+                <label for="feedback-name">Your name</label>
+                <input id="feedback-name" name="name" type="text" maxlength="40"
+                  autocomplete="name" placeholder="How should we call you?" required />
+              </div>
+              <div class="form-field">
+                <label for="feedback-message">Your suggestion</label>
+                <textarea id="feedback-message" name="message" maxlength="800" rows="5"
+                  placeholder="Tell us what you would like to see, improve, or ask." required></textarea>
+                <span class="character-count"><b id="feedback-count">0</b>/800</span>
+              </div>
+              <div class="form-trap" aria-hidden="true">
+                <label for="feedback-company">Company</label>
+                <input id="feedback-company" name="company" type="text" tabindex="-1" autocomplete="off" />
+              </div>
+              <button class="primary-button feedback-submit" type="submit">
+                <span>Post suggestion</span>
+              </button>
+              <p id="feedback-status" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="feedback-preview">
+            <div class="feedback-preview-head">
+              <div>
+                <p class="kicker">Community notes</p>
+                <h3>Ideas from future users</h3>
+              </div>
+              <a class="text-link" href="./comments.html">View all messages <span aria-hidden="true">→</span></a>
+            </div>
+            <div id="featured-comments" class="comment-list compact" aria-live="polite">
+              <p class="comment-loading">Loading community suggestions…</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <script src="./script.js?v=20260612-2"></script>
+    <script src="./supabase-config.js?v=20260614-1"></script>
+    <script type="module" src="./comments.js?v=20260614-1"></script>
+    <script src="./script.js?v=20260614-1"></script>
   </body>
 </html>
