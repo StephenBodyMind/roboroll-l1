@@ -1,4 +1,4 @@
 window.ROBOROLL_SUPABASE = {
-  url: "YOUR_SUPABASE_PROJECT_URL",
-  anonKey: "YOUR_SUPABASE_ANON_KEY",
+  url: "https://yllhzpmnfmqvqmczjjha.supabase.co",
+  anonKey: "sb_publishable_TCX_9lNvEKOSLVn4RhpzqQ_C9ypxJgR",
 };
