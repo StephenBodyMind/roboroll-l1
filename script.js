@@ -123,6 +123,24 @@ function updateScrollEffects() {
   });
 }
 
+function scrollToCurrentHash(behavior = "auto") {
+  if (!window.location.hash || window.location.hash === "#top") return;
+
+  const target = document.querySelector(window.location.hash);
+  if (!target) return;
+
+  target.scrollIntoView({ behavior, block: "start" });
+  updateScrollEffects();
+  revealTargetsInView();
+}
+
+function stabilizeHashScroll() {
+  scrollToCurrentHash("auto");
+  [120, 420, 950, 1600, 2600].forEach((delay) => {
+    window.setTimeout(() => scrollToCurrentHash("auto"), delay);
+  });
+}
+
 document.querySelectorAll(".media-frame img, .final-cta > img").forEach((image) => {
   image.classList.add("parallax-active");
 });
@@ -146,11 +164,17 @@ window.addEventListener("resize", () => {
   updateScrollEffects();
   revealTargetsInView();
 });
-window.addEventListener("hashchange", () => requestAnimationFrame(revealTargetsInView));
-window.addEventListener("pageshow", () => requestAnimationFrame(revealTargetsInView));
+window.addEventListener("hashchange", () => requestAnimationFrame(() => scrollToCurrentHash()));
+window.addEventListener("pageshow", () => requestAnimationFrame(stabilizeHashScroll));
 window.addEventListener("load", () => {
-  requestAnimationFrame(revealTargetsInView);
-  window.setTimeout(revealTargetsInView, 180);
+  requestAnimationFrame(() => {
+    revealTargetsInView();
+    stabilizeHashScroll();
+  });
+  window.setTimeout(() => {
+    revealTargetsInView();
+    stabilizeHashScroll();
+  }, 180);
 });
 updateScrollEffects();
 requestAnimationFrame(revealTargetsInView);

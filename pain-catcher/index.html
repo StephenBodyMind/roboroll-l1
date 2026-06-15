@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#071426" />
+    <meta name="description" content="Test your reflexes and capture the exact moment and location of a pain point, inspired by the RoboRoll app." />
+    <meta property="og:title" content="Capture the Pain Point | RoboRoll" />
+    <meta property="og:description" content="How fast can you lock onto the pain point? Play the RoboRoll reflex challenge." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./preview-gameplay.png" />
+    <title>Capture the Pain Point | RoboRoll</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <div class="ambient" aria-hidden="true"></div>
+
+      <header class="hud">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>RoboRoll</span>
+        </div>
+        <h1>CAPTURE THE PAIN</h1>
+        <div class="hud-stats">
+          <div>
+            <span>SCORE</span>
+            <strong id="score">0</strong>
+          </div>
+          <div>
+            <span>COMBO</span>
+            <strong id="combo">x0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="playfield" id="playfield" aria-label="Pain point capture game">
+        <img class="body-image" src="./assets/back-background.png" alt="" draggable="false" />
+        <div class="body-reaction" id="bodyReaction" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div class="ruler" aria-hidden="true">
+          <span class="ruler-unit">cm</span>
+          <span style="--p: 0">0</span>
+          <span style="--p: 0.25">15</span>
+          <span style="--p: 0.5">30</span>
+          <span style="--p: 0.75">45</span>
+          <span style="--p: 1">60</span>
+        </div>
+
+        <div class="track" aria-hidden="true">
+          <div class="track-energy"></div>
+        </div>
+
+        <div class="pain-point" id="painPoint" aria-hidden="true">
+          <i></i><i></i><i></i>
+          <b></b>
+        </div>
+
+        <div class="roller" id="roller" aria-hidden="true">
+          <div class="roller-glow"></div>
+          <img src="./assets/roller.png" alt="" draggable="false" />
+        </div>
+
+        <div class="result-toast" id="resultToast" role="status" aria-live="polite">
+          <span id="distanceText">ERROR 0.0 cm</span>
+          <strong id="gradeText">PERFECT</strong>
+          <small id="reactionText">REACTION 0 ms</small>
+        </div>
+      </section>
+
+      <section class="controls">
+        <p id="instruction">Tap Start and watch for the pain signal</p>
+        <button class="lock-button" id="lockButton" type="button">
+          <span class="target-icon" aria-hidden="true"></span>
+          <span id="buttonLabel">GET READY</span>
+        </button>
+        <div class="rounds" id="rounds" aria-label="Challenge progress"></div>
+        <p class="keyboard-hint">Tap the screen or press Space to lock</p>
+      </section>
+
+      <section class="start-panel overlay-panel is-visible" id="startPanel">
+        <div class="panel-content">
+          <div class="mini-roller"><img src="./assets/roller.png" alt="" /></div>
+          <p class="panel-kicker">A ROBOROLL REFLEX CHALLENGE</p>
+          <h2>Feel It. Lock It.</h2>
+          <p>The roller moves continuously. When the body reacts and the pain point flashes, stop the roller as close to the spot as you can.</p>
+          <ul>
+            <li><strong>5</strong><span>ROUNDS</span></li>
+            <li><strong>60 cm</strong><span>TRACK</span></li>
+            <li><strong>0.0</strong><span>BEST ERROR</span></li>
+          </ul>
+          <button id="startButton" type="button">START CHALLENGE</button>
+        </div>
+      </section>
+
+      <section class="end-panel overlay-panel" id="endPanel">
+        <div class="panel-content">
+          <span class="end-kicker">PAIN POINTS CAPTURED</span>
+          <div class="final-grade" id="finalGrade">S</div>
+          <h2 id="finalTitle">PAIN POINT MASTER</h2>
+          <p id="finalSummary">Score 0 · Average error 0.0 cm</p>
+          <div class="best-row">
+            <span>BEST REACTION</span>
+            <strong id="bestReaction">0 ms</strong>
+          </div>
+          <div class="end-actions">
+            <button id="replayButton" type="button">PLAY AGAIN</button>
+            <button id="shareButton" class="secondary" type="button">SHARE SCORE</button>
+          </div>
+          <a href="https://www.youtube.com/@DrStephenBodyMind" target="_blank" rel="noreferrer">Meet the inventor on YouTube →</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
